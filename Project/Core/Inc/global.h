@@ -26,6 +26,7 @@
 #define MAN_GREEN	17
 #define MAN_YELLOW	18
 
+#define TICK 10
 
 extern int status;
 extern int value;

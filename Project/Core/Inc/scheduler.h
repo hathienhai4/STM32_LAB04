@@ -9,6 +9,7 @@
 #define INC_SCHEDULER_H_
 
 #include <stdint.h>
+#include <global.h>
 
 typedef struct {
 	void (*pTask)(void);
@@ -20,7 +21,6 @@ typedef struct {
 }sTasks;
 
 #define SCH_MAX_TASKS	40
-#define SCH_TICK 10
 
 void SCH_Init(void);
 

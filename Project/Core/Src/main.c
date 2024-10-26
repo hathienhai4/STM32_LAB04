@@ -110,13 +110,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  SCH_Add_Task(timerRun, 0, TICK);
+  SCH_Add_Task(getKeyInput, 0, TICK);
+
   status = INIT;
-  value = 10;
-  value1 = 10;
-  SCH_Add_Task(timerRun, 0, 10);
-  SCH_Add_Task(getKeyInput, 0, 10);
-  SCH_Add_Task(task0, 0, 10);
-  SCH_Add_Task(task1, 10, 100);
+  SCH_Add_Task(updateClockBuffer, 0, TICK);
+  SCH_Add_Task(fsm_traffic_light_run, 0, TICK);
+  SCH_Add_Task(task1, 0, 100);
   while (1)
   {
 	  SCH_Dispatch_Tasks();

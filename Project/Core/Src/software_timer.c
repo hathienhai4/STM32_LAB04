@@ -1,10 +1,11 @@
 #include "software_timer.h"
+#include "global.h"
 
 int timer_counter[MAX_COUNTER];
 int timer_flag[MAX_COUNTER];
 
 void setTimer(int index, int value) {
-	timer_counter[index] = value / TIMER_TICK;
+	timer_counter[index] = value / TICK;
 	timer_flag[index] = 0;
 }
 
